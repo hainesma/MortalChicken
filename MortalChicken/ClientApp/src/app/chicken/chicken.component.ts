@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChickenService } from 'src/chicken.service';
-import { Chicken } from 'src/chicken';
-import { Farm } from 'src/farm';
+import { ChickenService } from '../chicken.service';
+import { Chicken } from '../chicken';
+import { Farm } from '../farm';
 
 @Component({
     selector: 'app-chicken',
@@ -24,7 +24,7 @@ export class ChickenComponent {
         
         
         getChickens(){
-            this.chickenserv.getChickens(this.base)
+            this.chickenserv.getChickensList(this.base)
             .subscribe(chickList => {
                 this.allChickens = chickList;
                 console.log(this.allChickens)
