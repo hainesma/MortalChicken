@@ -1,4 +1,4 @@
-﻿import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, Inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChickenService } from 'src/chicken.service';

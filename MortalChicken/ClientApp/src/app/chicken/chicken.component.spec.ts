@@ -1,4 +1,4 @@
-﻿/// <reference path="../../../../node_modules/@types/jasmine/index.d.ts" />
+
 import { TestBed, async, ComponentFixture, ComponentFixtureAutoDetect } from '@angular/core/testing';
 import { BrowserModule, By } from "@angular/platform-browser";
 import { ChickenComponent } from './chicken.component';
@@ -7,6 +7,7 @@ let component: ChickenComponent;
 let fixture: ComponentFixture<ChickenComponent>;
 
 describe('chicken component', () => {
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ ChickenComponent ],
@@ -23,3 +24,4 @@ describe('chicken component', () => {
         expect(true).toEqual(true);
     }));
 });
+

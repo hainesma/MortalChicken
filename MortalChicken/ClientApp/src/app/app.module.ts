@@ -6,7 +6,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
+
 import { FarmComponent } from './farm/farm.component';
+
 import { ChickenComponent } from './chicken/chicken.component';
 
 @NgModule({
@@ -16,7 +18,6 @@ import { ChickenComponent } from './chicken/chicken.component';
     HomeComponent,
     ChickenComponent,
     FarmComponent
-
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -26,7 +27,6 @@ import { ChickenComponent } from './chicken/chicken.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'chicken', component: ChickenComponent },
       { path: 'farm', component: FarmComponent }
-   
     ])
   ],
   providers: [],
