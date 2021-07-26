@@ -12,7 +12,9 @@ namespace MortalChicken.Context
         public DbSet<Chicken> Chickens { get; set; }
         public DbSet<Farm> Farms { get; set; }
 
-        public ChickenDbContext(ChickenDbContext options) : base(options) { }
+        public ChickenDbContext(DbContextOptions options) : base(options) { }
+        public ChickenDbContext() { }
 
+        
     }
 }
