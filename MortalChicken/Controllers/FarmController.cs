@@ -18,7 +18,7 @@ namespace MortalChicken.Controllers{
         [Route("all")]
         public List<Farm> GetFarms()
         {
-            List < Farm > farms = db.Farms();
+            List<Farm> farms = db.Farms.ToList(); ;
             return farms;
         }
         
