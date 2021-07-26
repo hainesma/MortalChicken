@@ -29,7 +29,7 @@ namespace MortalChicken.Models
         public double Luck { get; set; }
         public Color Color { get; set; }
         [ForeignKey("FarmId")]
-        public Farm Farm { get; set; }
+        public int FarmId { get; set; }
 
     }
 }

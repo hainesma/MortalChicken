@@ -45,7 +45,7 @@ namespace MortalChicken.Controllers
             List<Chicken> chickensAtFarm = new List<Chicken>();
             foreach(Chicken c in db.Chickens)
             {
-                if(c.Farm.Id == farmId)
+                if(c.FarmId == farmId)
                 {
                     chickensAtFarm.Add(c);
                 }
@@ -57,6 +57,8 @@ namespace MortalChicken.Controllers
         [Route("Add/name={name}/farm={farmId}")]
         public void AddChicken(string name, int farmId)
         {
+            
+
             Random r = new Random();
             int numberColors = Enum.GetValues(typeof(Color)).Length;
             Chicken c = new Chicken();
@@ -67,7 +69,10 @@ namespace MortalChicken.Controllers
             c.Speed = r.Next(1, 11);
             c.Luck = r.NextDouble() * 10;
             c.Color = (Color)r.Next(0, numberColors - 1);
-            c.Farm.Id = farmId;
+            c.FarmId = farmId;
+
+            db.Chickens.Add(c);
+            db.SaveChanges();
         }
     }
 }
