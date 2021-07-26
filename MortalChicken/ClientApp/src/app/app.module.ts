@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+
+import { FarmComponent } from './farm/farm.component';
+
 import { ChickenComponent } from './chicken/chicken.component';
 
 @NgModule({
@@ -16,9 +16,8 @@ import { ChickenComponent } from './chicken/chicken.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-    ChickenComponent
+    ChickenComponent,
+    FarmComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -26,9 +25,8 @@ import { ChickenComponent } from './chicken/chicken.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'chicken', component: ChickenComponent}
+      { path: 'chicken', component: ChickenComponent },
+      { path: 'farm', component: FarmComponent }
     ])
   ],
   providers: [],

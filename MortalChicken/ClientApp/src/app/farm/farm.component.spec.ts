@@ -1,22 +1,21 @@
-
+﻿/// <reference path="../../../../node_modules/@types/jasmine/index.d.ts" />
 import { TestBed, async, ComponentFixture, ComponentFixtureAutoDetect } from '@angular/core/testing';
 import { BrowserModule, By } from "@angular/platform-browser";
-import { ChickenComponent } from './chicken.component';
+import { FarmComponent } from './farm.component';
 
-let component: ChickenComponent;
-let fixture: ComponentFixture<ChickenComponent>;
+let component: FarmComponent;
+let fixture: ComponentFixture<FarmComponent>;
 
-describe('chicken component', () => {
-
+describe('farm component', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ ChickenComponent ],
+            declarations: [ FarmComponent ],
             imports: [ BrowserModule ],
             providers: [
                 { provide: ComponentFixtureAutoDetect, useValue: true }
             ]
         });
-        fixture = TestBed.createComponent(ChickenComponent);
+        fixture = TestBed.createComponent(FarmComponent);
         component = fixture.componentInstance;
     }));
 
@@ -24,4 +23,3 @@ describe('chicken component', () => {
         expect(true).toEqual(true);
     }));
 });
-

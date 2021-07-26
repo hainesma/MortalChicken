@@ -13,14 +13,13 @@
 //    {
         
 //        ChickenDbContext db = new ChickenDbContext();
-        
-//        [HttpGet]
-//        [Route("all")]
-//        public List<Farm> GetFarms()
-//        {
-//            List < Farm > farms = db.Farms();
-//            return farms;
-//        }
-        
+
+        [HttpGet]
+        [Route("all")]
+        public List<Farm> GetFarms()
+        {
+            List<Farm> farms = db.Farms.ToList(); ;
+            return farms;
+        }
 //    }
 //}
