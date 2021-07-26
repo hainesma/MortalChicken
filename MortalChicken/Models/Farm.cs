@@ -7,20 +7,13 @@ using System.Threading.Tasks;
 
 namespace MortalChicken.Models
 {
-    public class Chicken
+    public class Farm
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
-        public double Smarts { get; set; }
-        public double Strength { get; set; }
-        public double Speed { get; set; }
-        public double Luck { get; set; }
-        public string Color { get; set; }
-        [ForeignKey("FarmId")]
-        public Farm Farm { get; set; }
-
+        public int Seeds { get; set; }
+        public virtual ICollection<Chicken> Chickens { get; set; }
     }
 }
