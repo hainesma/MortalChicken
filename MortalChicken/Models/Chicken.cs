@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 
 namespace MortalChicken.Models
 {
+    public enum Color
+    {
+        White = 0,
+        Brown = 1,
+        Black = 2,
+        Red = 3,
+        Gray = 4
+    }
+    
     public class Chicken
     {
         [Key]
@@ -18,7 +27,8 @@ namespace MortalChicken.Models
         public double Strength { get; set; }
         public double Speed { get; set; }
         public double Luck { get; set; }
-        public string Color { get; set; }
+        public Color Color { get; set; }
+        [ForeignKey("FarmId")]
         public int FarmId { get; set; }
 
     }
