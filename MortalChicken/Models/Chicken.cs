@@ -9,7 +9,11 @@ namespace MortalChicken.Models
 {
     public enum Color
     {
-        White, Brown, Black, Red, Gray
+        White = 0,
+        Brown = 1,
+        Black = 2,
+        Red = 3,
+        Gray = 4
     }
     
     public class Chicken

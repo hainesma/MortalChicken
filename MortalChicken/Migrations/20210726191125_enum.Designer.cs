@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MortalChicken.Context;
 
 namespace MortalChicken.Migrations
 {
     [DbContext(typeof(ChickenDbContext))]
-    partial class ChickenDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210726191125_enum")]
+    partial class @enum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

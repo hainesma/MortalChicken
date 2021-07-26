@@ -15,6 +15,9 @@ namespace MortalChicken.Context
         public ChickenDbContext(DbContextOptions options) : base(options) { }
         public ChickenDbContext() { }
 
-        
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=ChickenDb;Trusted_Connection=True;");
+        }
     }
 }
