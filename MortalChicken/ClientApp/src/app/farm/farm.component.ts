@@ -38,7 +38,7 @@ export class FarmComponent {
     this.farmserv.getFarm(this.base, farmId)
     .subscribe(oneFarm => {
       this.singleFarm = oneFarm;
-      console.log(this.singleFarm);
+      console.log(this.singleFarm.name);
     
       
     })
@@ -51,6 +51,7 @@ export class FarmComponent {
     .subscribe(fList => {
       this.addedFarm = fList;
       console.log(this.addedFarm);
+      this.getFarms();
 
     })
   }

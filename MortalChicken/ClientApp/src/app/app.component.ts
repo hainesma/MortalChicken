@@ -19,6 +19,7 @@ export class AppComponent {
   allFarms: Farm[] = [];
   base: string;
   FarmC: FarmComponent;
+  FarmC2: FarmComponent;
   fFarm: Farm;
   
   constructor(private http: HttpClient, private farm: FarmComponent, private router: Router) {
@@ -27,8 +28,10 @@ export class AppComponent {
   }
   
   getFarm(farmId: number){
-    this.fFarm = this.FarmC.getFarm(farmId);
+    this.FarmC2 = this.farm;
+    this.fFarm = this.FarmC2.getFarm(farmId);
     this.router.navigate(['/farm'], {state: {id: farmId}})
+    console.log(this.fFarm)
     
   }
 

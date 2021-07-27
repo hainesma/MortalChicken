@@ -14,3 +14,19 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.main{
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  background-color: rgba(122, 235, 69, 0.589);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  align-content: center;
+  padding: 5px;
+  text-align: center;
+}
+html, body, header, footer{
+  background: radial-gradient( #d3b082, #50392bf5);
+}
