@@ -6,10 +6,10 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-
 import { FarmComponent } from './farm/farm.component';
-
 import { ChickenComponent } from './chicken/chicken.component';
+import { FarmService } from './farm.service';
+import { ChickenService } from './chicken.service';
 
 @NgModule({
   declarations: [
@@ -25,11 +25,11 @@ import { ChickenComponent } from './chicken/chicken.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'chicken', component: ChickenComponent },
-      { path: 'farm', component: FarmComponent }
+      { path: 'farm', component: FarmComponent },
+      { path: 'chicken', component: ChickenComponent }
     ])
   ],
-  providers: [],
+  providers: [FarmService, ChickenService, FarmComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
