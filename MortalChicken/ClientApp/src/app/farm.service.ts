@@ -19,3 +19,4 @@ export class FarmService{
         return this.http.get<Farm>(baseUrl + "/Id="+ farmId)
     }
 }
+
