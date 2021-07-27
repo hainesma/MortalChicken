@@ -7,8 +7,11 @@ import { Farm } from "./farm";
 })
 
 export class FarmService{
-    constructor(private http: HttpClient){}
-    getFarms(@Inject('BASE_URL') baseUrl: string): any{
+
+  constructor(private http: HttpClient) { }
+
+    getFarmsList(@Inject('BASE_URL') baseUrl: string): any{
         return this.http.get<Farm[]>(baseUrl + "Farm/AllFarms")
     }
 }
+

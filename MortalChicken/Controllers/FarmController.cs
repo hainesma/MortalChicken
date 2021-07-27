@@ -16,7 +16,7 @@ namespace MortalChicken.Controllers
         ChickenDbContext db = new ChickenDbContext();
 
         [HttpGet]
-        [Route("all")]
+        [Route("AllFarms")]
         public List<Farm> GetFarms()
         {
             List<Farm> farms = db.Farms.ToList(); ;
