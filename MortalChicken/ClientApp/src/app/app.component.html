@@ -1,13 +1,13 @@
 <body>
   <app-nav-menu></app-nav-menu>
 
-  <h2>List of Farms</h2>
-  <div *ngFor="let f of FarmC.allFarms">
+  <h2 style="text-align: center;">List of Farms</h2>
+  <div class="main" *ngFor="let f of FarmC.allFarms">
         <p>{{f.name}}</p>
         <p><button (click)="getFarm(f.id)">Get Farm Details</button></p>
   </div><br>
 
-  <div>
+  <div class ="main">
     <h2>Add New Farm</h2>
     <form #addFarmForm="ngForm" (ngSubmit)="addFarm(addFarmForm)">
       <p><input [(ngModel)]="farm.name" type="text" name="name" id="name" placeholder="Farm Name"/></p>
