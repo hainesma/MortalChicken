@@ -23,6 +23,30 @@ namespace MortalChicken.Controllers
             return farms;
         }
 
-       
+        [HttpPost]
+        [Route("Add/Name={name}")]
+        public void AddFarm(string name){
+            Farm f = new Farm();
+            f.Name = name;
+            f.Chickens = null;
+            f.Seeds = 100;
+
+            db.Farms.Add(f);
+            db.SaveChanges();
+
+        }
+
+        [HttpGet]
+        [Route("Id={farmId}")]
+        public Farm GetFarm(int farmId){
+            foreach (Farm f in db.Farms){
+                if(f.Id == farmId){
+                    return f;
+                }
+            }
+            return null;
+        }
     }
+
+
 }
